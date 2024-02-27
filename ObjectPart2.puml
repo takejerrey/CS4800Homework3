@@ -1,0 +1,18 @@
+@startuml
+object "<u>instructor:Instructor</u>" as I {
+  firstName = "Nima"
+  lastName = "Davarpanah"
+  officeNumber = "3-2636"
+}
+object "<u>textbook:Textbook</u>" as T {
+  title = "Clean Code"
+  author = "Robert C. Martin"
+  publisher = "Prentice Hall"
+}
+object "<u>course:Course</u>" as C {
+  name = "Software Engineering"
+}
+C --> I : instructor
+C --> T : textbook
+
+@enduml

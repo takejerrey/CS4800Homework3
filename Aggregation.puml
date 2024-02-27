@@ -1,0 +1,39 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Course {
+    - courseName: String
+    - instructor: Instructor
+    - textbook: Textbook
+    + Course(in courseName: String, in instructor: Instructor, in textbook: Textbook)
+    + printInfo() : void
+}
+
+class Instructor {
+    - firstName: String
+    - lastName: String
+    - officeNumber: String
+    + Instructor(in firstName: String, in lastName: String, in officeNumber: String)
+    + getFirstName(): String
+    + setFirstName(in firstName: String): void
+    + getLastName(): String
+    + setLastName(in lastName: String): void
+    + getOfficeNumber(): String
+    + setOfficeNUmber(in officeNUmber: String): void
+}
+
+class Textbook {
+    - title: String
+    - author: String
+    - publisher: String
+    + Textbook(in title: String, in author: String, in publisher: String)
+    + getTitle(): String
+    + setTitle(in title: String): void
+    + getAuthor(): String
+    + setAuthor(in author: String): void
+    + getPublisher(): String
+    + setPublisher(in publisher: String): void
+}
+
+Course *-- "1" Instructor : has
+Course *-- "1" Textbook : has
+@enduml

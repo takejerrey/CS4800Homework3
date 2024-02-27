@@ -1,0 +1,16 @@
+@startuml
+object "<u>ships[0]:Ship</u>" as S {
+  name = "Ship One"
+  yearBuilt = "2024"
+}
+object "<u>ships[1]:CruiseShip</u>" as CuS {
+  name = "Ship Two"
+  yearBuilt = "4321"
+  maxPassengers = 10000
+}
+object "<u>ships[2]:CargoShip</u>" as CaS {
+  name = "ShipThree"
+  yearBuilt = "1234"
+  tonnage = 1000000
+}
+@enduml

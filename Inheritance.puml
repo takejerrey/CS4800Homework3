@@ -1,0 +1,48 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Employee {
+    - firstName: String
+    - lastName: String
+    - ssn: String
+    + print(): void
+    + getFirstName(): String
+    + setFirstName(in firstName: String): void
+    + getLastName(): String
+    + setLastName(in lastName: String): void
+    + getSsn(): String
+    + setSsn(in ssn: String): void
+    + Employee(in firstName: String, in lastName: String, in ssn: String)
+}
+class BaseEmployee extends Employee {
+    - salary: double
+    + print(): void
+    + BaseEmployee(in salary: double)
+}
+class SalariedEmployee extends Employee {
+    - weeklySalary: double
+    + print(): void
+    + getWeeklySalary(): double
+    + setWeeklySalary(in weeklySalary: double): void
+    + SalariedEmployee(in weeklySalary: double)
+}
+class CommissionEmployee extends Employee {
+    - commissionRate: double
+    - grossSales: double
+    + print(): void
+    + getCommissionRate(): double
+    + setCommissionRate(in commissionRate: double): void
+    + getGrossSales(): double
+    + setGrossSales(in grossSales: double): void
+    + CommissionEmployee(in commissionRate: double, in grossSales: double)
+}
+class HourlyEmployee extends Employee {
+    - hoursWorked: int
+    - wage: double
+    + print(): void
+    + getWage(): double
+    + setWage(in wage: double): void
+    + getHoursWorked(): int
+    + setHoursWorked(in hoursWorked: int): void
+    + HourlyEmployee(in hoursWorked: int, in wage: double)
+}
+@enduml

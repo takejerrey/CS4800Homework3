@@ -1,0 +1,29 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Ship {
+    - name : String
+    - yearBuilt : String
+    + Ship(in name: String, in yearBuilt: String)
+    + print()
+    + getName() : String
+    + setName(in name: String)
+    + getYearBuilt() : String
+    + setYearBuilt(in yearBuilt: String)
+}
+class CruiseShip extends Ship {
+    - maxPassengers : int
+    + CruiseShip(in name: String,in yearBuilt: String,in maxPassengers: int)
+    + print()
+    + getNumPassengers() : int
+    + setNumPassengers(in maxPassengers: int)
+}
+
+class CargoShip extends Ship {
+    - tonnage : int
+    + CargoShip(in name: String, in yearBuilt: String,in tonnage: int)
+    + print()
+    + getTonnage() : int
+    + setTonnage(in tonnage: int)
+}
+@enduml

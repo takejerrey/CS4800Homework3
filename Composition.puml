@@ -1,0 +1,28 @@
+@startuml
+skinparam classAttributeIconSize 0
+class File {
+    - name: String
+    - content: String
+    + File()
+    + printInfo(): void
+    + getName(): String
+    + setName(in newName: String): void
+    + getContent(): String
+    + setContent(in newContent: String): void
+}
+class Folder {
+    - name: String
+    - files: List<File>
+    - subFolders: List<Folder>
+    + Folder(in name: String)
+    + addFile(in newFile: File): void
+    + addSubFolder(in newSubFolder: Folder): void
+    + removeFile(in fileToRemove: File): void
+    + removeFolder(in folderToRemove: Folder): void
+    + printContents(): void
+    + getName(): String
+    + setName(in name: String): String
+}
+Folder *-- "many" File : contains
+Folder *-- "many" Folder : contains
+@enduml

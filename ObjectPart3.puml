@@ -1,0 +1,10 @@
+@startuml
+object "<u>root: Folder </u>" as R {
+  name = "php_demo1"
+}
+object "<u>phalcon: File </u>" as P{
+  name = ".phalcon"
+  content = ""
+}
+R -down-> P : contains
+@enduml
